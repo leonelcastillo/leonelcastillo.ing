@@ -599,6 +599,8 @@ i {
     box-shadow: 1px 8px 10px 2px var(--first-shadow);
     overflow: hidden;
     cursor: pointer;
+    padding-inline: 40px;
+    text-align: center;
 }
 
 .projects-github {

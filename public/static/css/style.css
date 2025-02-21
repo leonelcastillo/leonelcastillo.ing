@@ -56,6 +56,10 @@ body.dark .bottom-footer {
     color: #fff;
 }
 
+body.dark .project-box p {
+    color: #fff;
+}
+
 .container {
     width: 100%;
     position: relative;
@@ -719,6 +723,14 @@ i {
     bottom: 0;
 }
 
+.project-box:hover.project-box i,
+.project-box:hover.project-box>h3,
+.project-box:hover.project-box lable {
+    color: #fff;
+    z-index: 2;
+}
+
+.project-box:hover.project-box p,
 .project-box:hover.project-box i,
 .project-box:hover.project-box>h3,
 .project-box:hover.project-box lable {

@@ -1,89 +1,412 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.3.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.3.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonel Castillo</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+</head>
+
+<body>
+    <!-- nav menu -->
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">LC</p>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <!-- dark mode -->
+            <div class="mode">
+                <div class="moon-sun" id="toggle-switch">
+                    <i class="fa fa-moon" id="moon"></i>
+                    <i class="fa fa-sun" id="sun"></i>
+                </div>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+        <!-- main -->
+        <main class="wrapper">
+            <section class="section" id="home">
+                <div class="featured-box">
+                    <div class="featured-text">
+                        <div class="hello">
+                            <p>Hello I'm a</p>
+                        </div>
+                        <div class="featured-name">
+                            <span class="typedText"></span>
+                        </div>
+                        <div class="text-info">
+                            <p>
+                                My name is Leonel, I'm a Civil Engineer with 3+ years of experience.
+                            </p>
+                        </div>
+                        <div class="text-btn">
+                            <a href="#contact" class="btn hire-btn">Contact me</a>
+                            <a href="static/doc/cv.pdf" target="_blank" class="btn">Download CV<i
+                                    class="uil uil-file"></i></a>
+                        </div>
+                        <div class="social_icons">
+
+                            <a href="https://www.linkedin.com/in/leonel-castillo-s-691063194/" target="_blank" class="icon"><i
+                                    class="uil uil-linkedin-alt"></i></a>
+                            <a href="https://wa.me/584122550770" target="_blank" class="icon"><i
+                                    class="uil uil-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/leonelcastillo.o/" target="_blank" class="icon"><i
+                                class="uil uil-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <div class="image">
+                            <img src="static/img/me.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- about box -->
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1>About me</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <figure class="about-me">
+                                <figcaption>
+                                    <img src="static/img/avatar2.png" alt="" id="profile" />
+                                    <h2>Civil Engineer</h2>
+                                    <br>
+                                    <p>
+                                        Dynamic and versatile professional with extensive experience in civil engineering, 
+                                        contracting, cost estimation, designing, and programming. <br><br>
+                                        Skilled at managing construction projects, developing innovative designs, 
+                                        creating accurate cost estimates.<br><br>
+                                        My experience covers both collaborative and independent projects, which has
+                                        allowed me to adapt to different work environments with ease.<br><br>
+                                        I am a proactive and detail-oriented professional with a strong work ethic and a
+                                        commitment to excellence. I am always looking for new challenges and opportunities
+                                        to grow and develop my skills.<br><br>
+                                        I am passionate about technology and programming.
+                                    </p>
+                                </figcaption>
+                            </figure>
+                            <a href="#contact" class="about-me-btn">Contact me</a>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h2>Software</h2>
+                        <!-- Advanced -->
+                        <div class="skill-box">
+                            <span class="title">Microsoft Office</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div> -->
+                        </div>
+                        <!-- Intermedium -->
+                        <div class="skill-box">
+                            <span class="title">Revit</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div>-->
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">Lulowin</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div>-->
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">Python</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div>-->
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">JavaScript</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div>-->
+                        </div>
+                        <!-- Basic -->
+                        <div class="skill-box">
+                            <span class="title">AutoCAD</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div>-->
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">Canva</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div>-->
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">Civil 3D</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div>-->
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">Etabs</span>
+                            <!-- <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">Basic</span> 
+                                </span>
+                            </div>-->
+                        </div>
+                        <h2>Languages</h2>
+                        <!-- Advanced -->
+                        <div class="skill-box">
+                            <span class="title">Spanish</span>
+                            <div class="skill-bar">
+                                <span class="skill-per python">
+                                   <span class="tooltip">Native</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">English</span>
+                            <div class="skill-bar">
+                                <span class="skill-per python">
+                                   <span class="tooltip">Proficient</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- projects box -->
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>I can help with</h1>
+                </div>
+                <div class="project-container">
+                    <a class="project-box">
+                        
+                        <h3>Cost Estimation</h3>
+                        <p>Cost estimation for construction projects</p>
+
+                    </a>
+
+                    <a class="project-box">
+
+                        <h3>Metric Calculations</h3>
+                        <p>Measurements and quantifications for construction</p>
+
+                        <label for=""></label>
+                    </a>
+
+                    <a class="project-box">
+
+                        <h3>Civil Design</h3>
+                        <p>Design of construction projects</p>
+
+                        <label for=""></label>
+                    </a>
+
+                    <a class="project-box">
+
+                        <h3>BIM modeler</h3>
+                        <p>Collaborate in the creation of BIM models</p>
+
+                        <label for=""></label>
+                    </a>
+                    <a class="project-box">
+
+                        <h3>Contract administration</h3>
+                        <p>Managing contracts between parties for <br>construction</p>
+
+                        <label for=""></label>
+                    </a>
+                    
+                    <a class="project-box">
+
+                        <h3>Documentation</h3>
+                        <p>Create the required documentation</p>
+
+                        <label for=""></label>
+                    </a>
+
+                </div>
+                
+            </section>
+
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Certifications</h1>
+                </div>
+                <div class="project-container">
+                    <a href="https://konstruedu.com/es/certificate/view/353d8e10-a6f3-11ee-accb-121bb1abc7b1" target="_blank" class="project-box"
+                        id="redirect-github">
+
+                        <h3>Introduction to LEAN construction <br><i class="tabler--external-link"></i></h3>
+
+                        <label for=""></label>
+                    </a>
+
+                    <a href="https://konstruedu.com/es/certificate/view/cd23c590-a61e-11ee-accb-121bb1abc7b1" target="_blank" class="project-box"
+                        id="redirect-github">
+
+                        <h3>Civil 3D<br> applied to road projects<br><i class="tabler--external-link"></i></h3>
+
+                        <label for=""></label>
+
+                    </a>
+
+                    <a href="https://cert.efset.org/1MFyMr" target="_blank" class="project-box"
+                        id="redirect-github">
+
+                        <h3>EF SET English Certificate <br>(C2 Proficient)<i class="tabler--external-link"></i></h3>
+
+                        <label for=""></label>
+
+                    </a>
+
+                    <a href="https://www.freecodecamp.org/certification/leonelcastillo/responsive-web-design" target="_blank" class="project-box"
+                        id="redirect-github">
+
+                        <h3>Responsive Web Design<br><i class="tabler--external-link"></i></h3>
+
+                        <label for=""></label>
+
+                    </a>
+                </div>
+                
+            </section>
+
+            <!-- contact box -->
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Let's get in together</h1>
+                    <span>Do you have a project in mind? Contact me here</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a class="col" href="https://docs.google.com/forms/d/e/1FAIpQLScx8vUnvhTTHuaGyxqhN9d9NFXiakCkWZ83wl0XNJMUHiC3Iw/viewform?usp=header" target="_blank" style="list-style: none; text-decoration: none; text-align: center;">
+                        <div class="contact-info">
+                            <h2>Find me <i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i>civil@leonelcastillo.ing</p>
+                            <p><i class="uil uil-phone"></i>+58 412 2550770</p>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- <div class="col">
+                        <div class="form-control">
+                            <form id="contactForm">
+                                <div class="form-inputs">
+                                    <input type="text" class="input-field" name="name" placeholder="Your Name">
+                                    <input type="text" class="input-field" name="email" placeholder="Your Email">
+                                </div>
+                                <div class="text-area">
+                                    <input type="text" class="input-subject" name="subject" placeholder="Subject">
+                                    <textarea placeholder="Message" name="message"></textarea>
+                                </div>
+                                <div id="errors">
+
+                                </div>
+                                <div class="form-button">
+                                    <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="successModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>¡El formulario se envió correctamente!</p>
+                </div>
+            </div>
+
+            <div id="errorModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>¡Hubo un error al enviar el formulario!</p>
+                </div>
+            </div>
+
+            -->
+        </main>
+        <!-- footer -->
+        <footer>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+
+                <a href="https://www.linkedin.com/in/leonel-castillo-s-691063194/" target="_blank" class="icon" style="text-decoration: none;
+                color: inherit;"><i class="fa-brands fa-linkedin-in icon"></i></a>
+                <a href="https://wa.me/584122550770" target="_blank" class="icon" style="text-decoration: none;
+                color: inherit;"><i class="uil uil-whatsapp"></i></a>
+                <a href="https://www.instagram.com/leonelcastillo.o/" target="_blank" class="icon" style="text-decoration: none;
+                color: inherit;"><i
+                    class="uil uil-instagram"></i></a>
+
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright 2025 &copy; <a href="" style="color: #ae2025; list-style: none;">Leonel Castillo</a> - All rights
+                    reserved</p>
+            </div>
+        </footer>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="static/js/script.js"></script>
+</body>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
 </html>

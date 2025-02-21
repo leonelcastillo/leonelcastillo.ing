@@ -291,6 +291,10 @@ i {
     animation: iconSlide 2.5s infinite alternate;
 }
 
+.circle-icon {
+    border-radius: 50%;
+}
+
 @keyframes iconSlide {
     25% {
         border: 2px solid #e6d12e;
